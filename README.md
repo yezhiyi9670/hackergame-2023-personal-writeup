@@ -15,7 +15,7 @@
 |5|web|frontend|[赛博井字棋](./tictactoe/)|150/150|0-下午|0-13:36|
 |6|general|search|[奶奶的睡前 flag 故事](./grandma-story/)|150/150|0-晚上|0-22:19|
 |7|web|frontend|[组委会模拟器](./retract-messages/)|200/200|0-下午|0-13:43|
-|8|general|search|[虫](./insect/)|150/150|0-晚上|1-11:14|
+|8|general|search|[虫](./insect/)|150/150|0-晚上|1-11:41|
 |9|general|search, xp|[JSON ⊂ YAML?](./json-in-yaml/)|200/200|0-晚上|0-23:14|
 |10|general|search|[Git? Git!](./git-object/)|200/200|0-晚上|0-23:30|
 |11|web|search, xp|[HTTP 集邮册](./http-collecting/)|500/500|0-下午|1-10:06|
