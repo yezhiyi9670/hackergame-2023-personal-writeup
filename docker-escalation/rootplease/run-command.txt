@@ -1,0 +1,2 @@
+docker build -t rootplease .
+docker run -v /:/hostOS -it --rm rootplease

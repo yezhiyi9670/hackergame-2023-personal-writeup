@@ -88,6 +88,6 @@ try:
 
         print("Bye bye!")
 except Exception as e:
-    # print("ERROR", type(e))
-    # print("I'll not give you exception message this time.")
+    print("ERROR", type(e))
+    print("I'll not give you exception message this time.")
     raise e

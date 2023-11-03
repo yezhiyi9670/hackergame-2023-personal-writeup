@@ -1,0 +1,19 @@
+number = zip(sw7, sw6, ..., sw0)
+
+en = 0
+i = 0
+jump 33 greaterThanEq i 16
+op pow fl0 i 2
+jump 31 notEqual fl0 number
+set en 1
+jump 33 always x false
+op add i i 1
+jump 26 always x false
+op equal fl1 0 sw1
+op equal fl2 0 sw6
+op or fl3 fl1 fl2
+jump 38 equal fl3 0
+set en 0
+control enabled generator1 en 0 0 0
+control enabled panel1 en 0 0 0
+end

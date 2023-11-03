@@ -1,0 +1,9 @@
+{
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "files.associations": {
+    "*.mdx": "markdown",
+    "unistd.h": "c",
+    "fcntl.h": "c"
+  }
+}
