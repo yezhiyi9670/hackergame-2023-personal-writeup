@@ -29,7 +29,7 @@
 |14|general|automate|[🪐 高频率星球](./session-record/README.md)|200/200|1-上午|1-12:03|
 |21|web|frontend, xp|[微积分计算小练习 2.0](./calculus-quiz-bot/README.md)|250/250|0-下午|1-11:12|
 |▲| **---** | **---** | **结算 1** | **2350/2350** | **0-下午** | **1-12:58** |
-|4|general|search|[旅行照片 3.0](/travel-photo/README.md)|450/450|0-晚上|5-21:46|
+|4|general|search|[旅行照片 3.0](./travel-photo/README.md)|450/450|0-晚上|5-21:46|
 |12|general|search|[Docker for Everyone](./docker-escalation/README.md)|150/150|2-下午|2-16:52|
 |13|math|trivial|[惜字如金 2.0](./xzrj/README.md)|200/200|2-下午|2-16:24|
 |15|AI|search, luck|[~~🪐 小型大语言模型星球~~](./language-ai/README.md)|300/800|2-下午|4-21:07|
