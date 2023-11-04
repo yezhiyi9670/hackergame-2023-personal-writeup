@@ -53,3 +53,4 @@ for subdir in dir_list:
 
 print('I: Copying root README.md')
 shutil.copyfile('README.md', BUILD_DIR + 'README.md')
+shutil.copyfile('LICENSE', BUILD_DIR + 'LICENSE')

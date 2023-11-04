@@ -1,6 +1,8 @@
-# HackerGame 2023 部分题解 (WIP)
+# HackerGame 2023 部分题解
 
 > Author: yezhiyi9670 #____，启动！ (239)
+>
+> [查看原仓库](https://github.com/yezhiyi9670/hackergame-2023-personal-writeup)
 >
 > [比赛平台](https://hack.lug.ustc.edu.cn/) · [排行榜存档](https://hg2023.lug.ustc.edu.cn/) · [官方题解仓库与题目源代码存档](https://github.com/USTC-Hackergame/hackergame2023-writeups)
 
