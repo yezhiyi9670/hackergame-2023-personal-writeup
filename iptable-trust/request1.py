@@ -14,9 +14,9 @@ Host: example.com
 data1 = '''PO'''
 data2 = '''ST / HTTP/1.1
 Host: example.com
-Content-Length: 10
+Content-Length: 14
 
-[redacted]
+239:[redacted]
 '''
 
 # tcp_socket.send(data.encode())

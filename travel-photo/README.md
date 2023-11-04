@@ -154,7 +154,7 @@ Answer1=2022-01-01&Answer2=ICRR
 
   function buildBoomingData() {
     const ret = []
-    for(let i = 2022; i <= 2023; i++) { // 这是因为没看到“暑假”两个字
+    for(let i = 2022; i <= 2023; i++) { // 别问，问就是没看到“暑假”两个字
       for(let j = 1; j <= 12; j++) {
         for(let k = 1; k <= 31; k++) {
           let I = '' + i

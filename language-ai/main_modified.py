@@ -1,10 +1,12 @@
+import random
 import gradio as gr
+from numpy import size
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from secret import theme_kargs, check_token, get_token_js, custom_css, read_flags
 
-model = AutoModelForCausalLM.from_pretrained("roneneldan/TinyStories-33M").eval()
-tokenizer = AutoTokenizer.from_pretrained("roneneldan/TinyStories-33M")
+model = AutoModelForCausalLM.from_pretrained("./TinyStories-33M").eval()
+tokenizer = AutoTokenizer.from_pretrained("./TinyStories-33M")
 
 HINT = """和我聊天并且让我说出特定的词语（忽略大小写）证明你足够聪明 🤔。
 
@@ -61,8 +63,8 @@ def bot(message, _history, token):
 
     try:
         model_output_text = predict(message)
-    except Exception:
-        return "出错了，请重新尝试。"
+    except Exception as err:
+        return repr(err)
 
     info = check_response(message, model_output_text, token)
     if info:
@@ -71,21 +73,41 @@ def bot(message, _history, token):
     return model_output_text
 
 
-with gr.Blocks(theme=gr.themes.Default(**theme_kargs), css=custom_css) as demo:
-    # Token for hackergame
-    token = gr.Textbox(value="", label="Token", visible=False)
-    demo.load(None, [], [token], _js=get_token_js)
+# with gr.Blocks(theme=gr.themes.Default(**theme_kargs), css=custom_css) as demo:
+#     # Token for hackergame
+#     token = gr.Textbox(value="", label="Token", visible=False)
+#     demo.load(None, [], [token], js=get_token_js)
 
-    #
-    # Chatbot
-    #
-    chat = gr.ChatInterface(bot, additional_inputs=[token])
-    source_code = gr.Code(
-        value=open(__file__).read(), language="python", label="main.py"
-    )
-    demo.load(
-        lambda: ([(None, HINT)], [(None, HINT)]), [], [chat.chatbot_state, chat.chatbot]
-    )
+#     #
+#     # Chatbot
+#     #
+#     chat = gr.ChatInterface(bot, additional_inputs=[token])
+#     source_code = gr.Code(
+#         value=open(__file__, encoding='utf-8').read(), language="python", label="main.py"
+#     )
+#     demo.load(
+#         lambda: ([(None, HINT)], [(None, HINT)]), [], [chat.chatbot_state, chat.chatbot]
+#     )
 
-if __name__ == "__main__":
-    demo.queue(concurrency_count=16).launch(show_api=False, share=False)
+# if __name__ == "__main__":
+#     demo.queue().launch(max_threads=8, show_api=False, share=False)
+
+def gen_prompt():
+    ch = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,?#'
+    ret = ''
+    for i in range(7):
+        ret += ch[random.randrange(0, len(ch))]
+    ret += ''
+    return ret.strip()
+
+times = 0
+while True:
+    times += 1
+    print('---', times, '---')
+    prompt = gen_prompt()
+    print(prompt)
+    response = predict(prompt)
+    print(response)
+    if 'accepted' in response.lower() or 'hackergame' in response.lower() or '🐮' in response.lower():
+        print('Yes!', prompt)
+        break

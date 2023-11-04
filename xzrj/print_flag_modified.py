@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Th size of the file may reduce after XZRJification
+# The size of the file may reduce after XZRJification
 
 def check_equals(left, right):
     # check whether left == right or not
@@ -8,19 +8,19 @@ def check_equals(left, right):
 
 def get_code_dict():
     # prepare the code dict
-    cod_dict = []
-    cod_dict += ['nymeh1niwemflcir}echaet#']
-    cod_dict += ['a3g7}kidgojernoetl#sup?h']
-    cod_dict += ['ulw!#f5soadrhwnrsnstnoeq']
-    cod_dict += ['ct#{l-findiehaai{oveatas']
-    cod_dict += ['ty9kxborszst#guyd?!blm-p']
-    check_equals(set(len(s) for s in cod_dict), {24})
-    return ''.join(cod_dict)
+    code_dict = []
+    code_dict += ['nymeh1niwemflcir}echaet#']
+    code_dict += ['a3g7}kidgojernoetl#sup?h']
+    code_dict += ['ulw!#f5soadrhwnrsnstnoeq']
+    code_dict += ['ct#{l-findiehaai{oveatas']
+    code_dict += ['ty9kxborszst#guyd?!blm-p']
+    check_equals(set(len(s) for s in code_dict), {24})
+    return ''.join(code_dict)
 
 def decrypt_data(input_codes):
     # retrieve the decrypted data
-    cod_dict = get_code_dict()
-    output_chars = [cod_dict[c] for c in input_codes]
+    code_dict = get_code_dict()
+    output_chars = [code_dict[c] for c in input_codes]
     return ''.join(output_chars)
 
 if __name__ == '__main__':

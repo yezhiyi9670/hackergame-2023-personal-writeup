@@ -73,6 +73,36 @@ flag{I_can_eat_your_pieces_46c9147c57}
 
 I can eat your pieces! 我可以把你的棋子吃了！
 
+### 其他做法
+
+#### 调用 `setMove`
+
+这题中的 `setMove` 方法其实是暴露到全局中的，这就意味着在开发者工具中可以直接执行。看看 `setMove` 的逻辑：
+
+```js
+async function setMove(x, y) {
+  if (board[x][y] != 0) {
+    return;
+  }
+  if (frozen) {
+    return;
+  }
+  let url = window.location.href; // 获取当前 URL
+  let data = { x: x, y: y }; // 设置要发送的数据
+  return fetch(url, {
+    method: "POST", // 设置方法为 POST
+    headers: {
+      "Content-Type": "application/json", // 设置内容类型为 JSON
+    },
+    body: JSON.stringify(data), // 将数据转换为 JSON 格式
+  }).catch(errorHandler);
+}
+```
+
+首先判断 `board[x][y]` 是否有棋子。但是，注意到 `setMove` 中没有任何更新 `board` 的过程，也就是说，直接执行 `setMove`，`board` 是不会更新的。
+
+在开发者工具中依次执行 `await setMove(1,1)` `await setMove(0,0)`（由于本地的 `board` 不会更新，其始终为空，两次执行都会发送请求）。最后点击右下角格子即可取胜。
+
 ### 不可行的做法
 
 #### 下棋

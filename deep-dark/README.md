@@ -18,7 +18,7 @@
 
 这是一个可以无限向下滚动的页面，越向下滚动越黑暗。传说底部藏着 flag。
 
-![](./assets/image.png)
+![](./assets/headpage.png)
 
 ![](./assets/400m.png)
 
